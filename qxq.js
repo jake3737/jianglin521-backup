@@ -1,26 +1,28 @@
-
 /*
 软件名称:趣星球
 更新时间：2021-10-9 @YaphetS0903
 脚本说明：趣星球。。。下载地址(带邀请码,介意自己appstore下载)https://api.xqustar.com/h5/sharelinkv2/index.html?inviteCode=1RN9GGWZ2W
 邀请码  1RN9GGWZ2W
-每天随机金额自动提现，测试了三天是一天3毛6，一天3毛5，一天3毛2，提现全部秒到
-一天220-300星钻左右（100星钻1毛），加入自动夺宝5次，运气好一天1000多星钻，测试两天中了一次
-还有很多任务没写，后续慢慢更新其他任务。
+每天随机金额自动提现
+一天220-300星钻左右（100星钻1毛），加入自动夺宝5次(50人自动开奖)，五十分之一概率中奖，运气好1000多星钻，中了一次
+测试了四天自动提现金额是一天3毛6，一天3毛5，一天3毛2，一天3毛3提现全部秒到
+还有几个任务没写，后续慢慢更新其他任务。
 本脚本以学习为主
-获取数据： 进入软件，点击我的，点击砍价免费拿，随便点一个免费拿，获取url和header数据
+获取数据： 进入软件，点击赚钱，下拉刷新获取数据
 TG通知群:https://t.me/tom_ww
 TG电报交流群: https://t.me/tom_210120
 boxjs地址 :  
 https://raw.githubusercontent.com/YaphetS0903/JStest/main/YaphteS0903.boxjs.json
+
 趣星球
+青龙环境配置(@隔开)export qxqhd='抓取的header1@抓取的header2'
 圈X配置如下，其他自行测试，时间随意，一天运行五次即可,主要为了五次夺宝机会
 [task_local]
 #趣星球
 0 8-18/2 * * * https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js, tag=趣星球, enabled=true
 [rewrite_local]
 #趣星球
-https://api.xqustar.com/api/haggle/productDetail? url script-request-header https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js
+https://api.xqustar.com/api/task/v2/list url script-request-header https://raw.githubusercontent.com/YaphetS0903/JStest/main/qxq.js
 [MITM]
 hostname = api.xqustar.com
 */
@@ -28,9 +30,9 @@ const $ = new Env('趣星球');
 let status;
 
 status = (status = ($.getval("qxqstatus") || "1")) > 1 ? `${status}` : "";
-const qxqurlArr = [], qxqhdArr = [], qxqcount = ''
+let qxqurlArr = [], qxqhdArr = [], qxqcount = ''
 let qxqurl = $.getdata('qxqurl')
-let qxqhd = $.getdata('qxqhd')
+let qxqhd= $.isNode() ? (process.env.qxqhd ? process.env.qxqhd : "") : ($.getdata('qxqhd') ? $.getdata('qxqhd') : "")
 
 let b = Math.round(new Date().getTime() / 1000).toString();
 let DD = RT(1000, 1500)
@@ -39,7 +41,7 @@ let tx = ($.getval('tx') || '1');
 let id = '', txid = '', ppid = '', amt = '', idd = '', pid1 = ''
 let target = ''
 $.message = ''
-
+let qxqhds = ""
 
 
 
@@ -48,6 +50,7 @@ $.message = ''
     if (typeof $request !== "undefined") {
         await qxqck()
     } else {
+        if(!$.isNode()){
         qxqurlArr.push($.getdata('qxqurl'))
         qxqhdArr.push($.getdata('qxqhd'))
 
@@ -80,11 +83,11 @@ $.message = ''
                 await $.wait(5000)
                 await qxqhaggleinfo()//砍价
                 await $.wait(3000)
-                for (let k = 0; k < 2; k++) {
-                    $.index = k + 1
-                    console.log(`\n【开始第${k + 1}个看创意视频任务!】\n等待2秒开始看创意视频任务`)
+                for (let p = 0; p < 2; p++) {
+                    $.index = p+ 1
+                    console.log(`\n【开始第${p + 1}个看创意视频任务!】\n等待2秒开始看创意视频任务`)
                     await qxqvideo()
-                    await $.wait(30000)
+                    await $.wait(20000)
                 }
 
 
@@ -93,9 +96,51 @@ $.message = ''
                 await qxqlottoinfo()//抽奖
                 await $.wait(3000)
                 await qxqtxpage()//提现
-                message()
+               //message()
             }
         }
+       }else {
+        if (process.env.qxqhd && process.env.qxqhd.indexOf('@') > -1) {
+            qxqhdArr = process.env.qxqhd.split('@');
+          console.log(`您选择的是用"@"隔开\n`)
+      } else {
+        qxqhds = [process.env.qxqhd]
+      };
+      Object.keys(qxqhds).forEach((item) => {
+      if (qxqhds[item]) {
+        qxqhdArr.push(qxqhds[item])
+      }
+  })
+        console.log(`共${qxqhdArr.length}个cookie`)
+          for (let k = 0; k < qxqhdArr.length; k++) {
+              $.message = ""
+              qxqhd = qxqhdArr[k]
+              $.index = k + 1;
+        console.log(`\n开始【趣星球${$.index}】`)
+        await qxqsign()//签到
+        await $.wait(3000)
+
+        await qxqzpinfo()//转盘
+        await $.wait(5000)
+        await qxqhaggleinfo()//砍价
+        await $.wait(3000)
+        for (let p = 0; p < 2; p++) {
+            $.index = p+ 1
+            console.log(`\n【开始第${p + 1}个看创意视频任务!】\n等待2秒开始看创意视频任务`)
+            await qxqvideo()
+            await $.wait(30000)
+        }
+
+
+        await qxqshare()//分享
+        await $.wait(3000)
+        await qxqlottoinfo()//抽奖
+        await $.wait(3000)
+        await qxqtxpage()//提现
+        message()
+    }
+}
+
     }
 })()
 
@@ -104,8 +149,9 @@ $.message = ''
 
 
 
+
 function qxqck() {
-    if ($request.url.indexOf("productDetail?") > -1) {
+    if ($request.url.indexOf("task/v2/list") > -1) {
         const qxqurl = $request.url
         if (qxqurl) $.setdata(qxqurl, `qxqurl${status}`)
         $.log(qxqurl)
@@ -164,6 +210,8 @@ function qxqsign(timeout = 0) {
         }, timeout)
     })
 }
+
+
 
 
 //签到翻倍
@@ -528,7 +576,7 @@ function qxqhaggleinfo(timeout = 0) {
                     console.log(`【获取到砍价信息】：${result.data.productList[0].desc}\n`)
                     pid1 = result.data.productList[0].pid
                     await $.wait(2000)
-                    await qxqhaggle()
+                    await qxqhuid()
 
 
                 } else {
@@ -546,11 +594,46 @@ function qxqhaggleinfo(timeout = 0) {
     })
 }
 
+//uid获取
+function qxqhuid(timeout = 0) {
+    return new Promise((resolve) => {
+
+        let url = {
+            url: `https://api.xqustar.com/api/invite/invitepage`,
+            headers: JSON.parse(qxqhd),
+
+        }
+        $.get(url, async (err, resp, data) => {
+            try {
+
+                const result = JSON.parse(data)
+
+                if (result.code == 200) {
+
+                    console.log(`【获取userid】：${result.data.userid}\n`)
+                    target = result.data.userid
+                    await $.wait(2000)
+                    await qxqhaggle()
+
+
+                } else {
+
+                    console.log(`【获取userid失败】：${result.message}\n`)
+
+                }
+            } catch (e) {
+
+            } finally {
+
+                resolve()
+            }
+        }, timeout)
+    })
+}
+
 //砍价
 function qxqhaggle(timeout = 0) {
     return new Promise((resolve) => {
-        target = qxqurl.match(/target=(\w.{35})/)[1]
-
         let url = {
             url: `https://api.xqustar.com/api/haggle/partake`,
             headers: JSON.parse(qxqhd),
