@@ -1,8 +1,8 @@
 /*
-软件名称:趣星球
+软件名称:趣星球(已黑)
 更新时间：2021-10-9 @YaphetS0903
-脚本说明：趣星球。。。下载地址(带邀请码,介意自己appstore下载)https://api.xqustar.com/h5/sharelinkv2/index.html?inviteCode=1RN9GGWZ2W
-邀请码  1RN9GGWZ2W
+脚本说明：趣星球。。。下载地址(appstore下载)
+
 每天随机金额自动提现
 一天220-300星钻左右（100星钻1毛），加入自动夺宝5次(50人自动开奖)，五十分之一概率中奖，运气好1000多星钻，中了一次
 测试了四天自动提现金额是一天3毛6，一天3毛5，一天3毛2，一天3毛3提现全部秒到
@@ -311,7 +311,7 @@ function qxqvideodb(timeout = 0) {
             headers: JSON.parse(qxqhd),
             body: `{
                 "taskcode": "watchappads",
-                "double": true
+                "double": false
               }`,
         }
         $.post(url, async (err, resp, data) => {
@@ -394,7 +394,7 @@ function qxqsharedb(timeout = 0) {
             headers: JSON.parse(qxqhd),
             body: `{
                 "taskcode": "share",
-                "double": true
+                "double": false
               }`,
         }
         $.post(url, async (err, resp, data) => {
@@ -467,7 +467,7 @@ function qxqlottoinfo(timeout = 0) {
 
 
 
-//抽奖
+//抽奖（视频）
 function qxqlotto(timeout = 0) {
     return new Promise((resolve) => {
 
@@ -500,10 +500,16 @@ function qxqlotto(timeout = 0) {
                     await qxqlottodb()
 
 
-                } else {
-
+                } else if (result.code == 10003){
+                    console.log(`【视频抽奖失败】：${result.message}\n`)
+                    if(tx == 1){
+                    console.log(`【开始钻石抽奖】\n`)
+                    await qxqlottoten()
+                    }else{
+                        console.log(`【请在boxjs设置tx=1可以花费钻石夺宝】\n`)
+                    }
+                }else{
                     console.log(`【抽奖失败】：${result.message}\n`)
-
                 }
             } catch (e) {
 
@@ -516,6 +522,54 @@ function qxqlotto(timeout = 0) {
 }
 
 
+//抽奖10星钻
+function qxqlottoten(timeout = 0) {
+    return new Promise((resolve) => {
+
+        let url = {
+            url: `https://api.xqustar.com/api/lotto/v2/partake`,
+            headers: JSON.parse(qxqhd),
+            body: `{
+            "seconds": "",
+            "pid": "${ppid}",
+            "plat": "app",
+            "inviterid": "",
+            "type": "diamond",
+            "sm": {
+              "shuMeiDeviceId": "",
+              "appVersion": "",
+              "os": "",
+              "guestId": ""
+            }
+          }
+          `,
+        }
+        $.post(url, async (err, resp, data) => {
+            try {
+
+                const result = JSON.parse(data)
+
+                if (result.code == 200) {
+                    console.log(`【星钻抽奖成功，获得抽奖码】\n`)
+                    await $.wait(2000)
+                    await qxqlottodb()
+
+
+                } else {
+
+                    console.log(`【星钻抽奖失败】：${result.message}\n`)
+
+                }
+            } catch (e) {
+
+            } finally {
+
+                resolve()
+            }
+        }, timeout)
+    })
+}
+
 //抽奖任务双倍奖励
 function qxqlottodb(timeout = 0) {
     return new Promise((resolve) => {
@@ -525,7 +579,7 @@ function qxqlottodb(timeout = 0) {
             headers: JSON.parse(qxqhd),
             body: `{
                 "taskcode": "lotto",
-                "double": true
+                "double": false
               }`,
         }
         $.post(url, async (err, resp, data) => {
@@ -691,7 +745,7 @@ function qxqhaggledb(timeout = 0) {
             headers: JSON.parse(qxqhd),
             body: `{
                 "taskcode": "haggle",
-                "double": true
+                "double": false
               }`,
         }
         $.post(url, async (err, resp, data) => {
