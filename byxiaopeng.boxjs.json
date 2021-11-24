@@ -1,0 +1,356 @@
+{
+    "id": "byxiaopeng.app.sub",
+    "name": "byxiaopeng脚本订阅",
+    "author": "@byxiaopeng",
+    "icon": "https://avatars.githubusercontent.com/u/23413134?s=460",
+    "repo": "https://github.com/byxiaopeng/myscripts",
+    "apps": [{
+        "id": "xgapp",
+        "name": "鑫广APP",
+        "keys": ["xgPhone","xgPhone2"],
+        "settings": [{
+            "id": "xgcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "xgPhone",
+            "name": "鑫广APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "xgPhone2",
+            "name": "鑫广APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://web.yiqizhu888.com/favicon.ico",
+            "https://web.yiqizhu888.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/xgapp.js"
+    },
+	{
+        "id": "ygyapp",
+        "name": "御果园APP",
+        "keys": ["ygyPhone","ygyPhone2"],
+        "settings": [{
+            "id": "ygycount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "ygyPhone",
+            "name": "御果园APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "ygyPhone2",
+            "name": "御果园APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://www.yoo-woo.com/favicon.ico",
+            "https://www.yoo-woo.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/ygyapp.js"
+    },
+	{
+        "id": "xmapp",
+        "name": "小米运动APP",
+        "keys": ["xmPhone","xmPhone2"],
+        "settings": [{
+            "id": "xmcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "xmPhone",
+            "name": "小米运动APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "xmPhone2",
+            "name": "小米运动APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://www.mi.com/favicon.ico",
+            "https://www.mi.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/xmyd.js"
+    },
+    {
+        "id": "hdapp",
+        "name": "鸿答APP",
+        "keys": ["hdPhone","hdPhone2"],
+        "settings": [{
+            "id": "hdcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "hdPhone",
+            "name": "鸿答APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "hdPhone2",
+            "name": "鸿答APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://ls.hzyuechuang.com/favicon.ico",
+            "https://ls.hzyuechuang.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/hdapp.js"
+    },
+    {
+        "id": "qxapp",
+        "name": "千熙APP",
+        "keys": ["qxPhone","qxPhone2"],
+        "settings": [{
+            "id": "qxcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "qxPhone",
+            "name": "千熙APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "qxPhone2",
+            "name": "千熙APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://xinggeculture.com/favicon.ico",
+            "https://xinggeculture.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/qxapp.js"
+    },
+    {
+        "id": "shapp",
+        "name": "苏汇APP",
+        "keys": ["shPhone","shPhone2"],
+        "settings": [{
+            "id": "shcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "shPhone",
+            "name": "苏汇APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "shPhone2",
+            "name": "苏汇APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://xashangdian.com/favicon.ico",
+            "https://xashangdian.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/shapp.js"
+    },
+    {
+        "id": "kdzyapp",
+        "name": "口袋庄园APP",
+        "keys": ["kdzyPhone","kdzyPhone2"],
+        "settings": [{
+            "id": "kdzycount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "kdzyPhone",
+            "name": "口袋庄园APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "kdzyPhone2",
+            "name": "口袋庄园APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "http://kdzhy.mlyougame.com:82/favicon.ico",
+            "http://kdzhy.mlyougame.com:82/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/kdzyapp.js"
+    },
+    {
+        "id": "njbsapp",
+        "name": "景宁百狮APP",
+        "keys": ["jnbsPhone","jnbsPhone2"],
+        "settings": [{
+            "id": "jnbscount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "jnbsPhone",
+            "name": "景宁百狮APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "jnbsPhone2",
+            "name": "景宁百狮APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://mly2bqr.com/favicon.ico",
+            "https://mly2bqr.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/njbsapp.js"
+    },
+    {
+        "id": "gmapp",
+        "name": "国迈APP",
+        "keys": ["gmPhone","gmPhone2"],
+        "settings": [{
+            "id": "gmcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "gmPhone",
+            "name": "国迈APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "gmPhone2",
+            "name": "国迈APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://shanxixincensm.com/favicon.ico",
+            "https://shanxixincensm.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/gmapp.js"
+    },
+    {
+        "id": "skjnapp",
+        "name": "时空聚能APP",
+        "keys": ["skjnPhone","skjnPhone2"],
+        "settings": [{
+            "id": "skjncount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "skjnPhone",
+            "name": "时空聚能APP账户密码1",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }
+		, {
+            "id": "skjnPhone2",
+            "name": "时空聚能APP账户密码2",
+            "val": "",
+            "type": "text",
+            "desc": "手机账户#密码"
+        }],
+        "icons": [
+            "https://yijianbwgd.com/favicon.ico",
+            "https://yijianbwgd.com/favicon.ico"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/skjnapp.js"
+    },
+	{
+        "id": "ykdapp",
+        "name": "悦看点APP",
+        "keys": ["ykdhd","ykdhd2"],
+        "settings": [{
+          "id": "ykdstatus",
+          "name": "当前账号",
+          "val": "1",
+          "type": "number",
+          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
+        },
+		{
+            "id": "ykdcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+        }, {
+            "id": "ykdhd",
+            "name": "悦看点hd信息1",
+            "val": "",
+            "type": "text",
+            "desc": ""
+        }
+		, {
+            "id": "ykdhd2",
+            "name": "悦看点hd信息2",
+            "val": "",
+            "type": "text",
+            "desc": ""
+        }],
+        "icons": [
+            "https://yuekandian.yichengw.cn/assets/logo1.png",
+            "https://yuekandian.yichengw.cn/assets/logo1.png"],
+        "author": "@byxiaopeng",
+        "repo": "https://github.com/byxiaopeng/myscripts",
+        "script": "https://raw.fastgit.org/byxiaopeng/myscripts/main/xmyd.js"
+    }
+	]
+}
