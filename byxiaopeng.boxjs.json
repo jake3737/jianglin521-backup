@@ -3,7 +3,7 @@
     "name": "byxiaopeng脚本订阅",
     "author": "@byxiaopeng",
     "icon": "https://avatars.githubusercontent.com/u/23413134?s=460",
-    "repo": "https://github.com/byxiaopeng/myscripts",
+    "repo": "https://gitee.com/gossh520/script",
     "apps": [{
         "id": "xgapp",
         "name": "鑫广APP",
@@ -32,8 +32,8 @@
             "https://web.yiqizhu888.com/favicon.ico",
             "https://web.yiqizhu888.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/xgapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/xgapp.js"
     },
 	{
         "id": "ygyapp",
@@ -63,8 +63,8 @@
             "https://www.yoo-woo.com/favicon.ico",
             "https://www.yoo-woo.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/ygyapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/ygyapp.js"
     },
 	{
         "id": "xmapp",
@@ -94,8 +94,8 @@
             "https://www.mi.com/favicon.ico",
             "https://www.mi.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/xmyd.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/xmyd.js"
     },
     {
         "id": "hdapp",
@@ -125,8 +125,8 @@
             "https://ls.hzyuechuang.com/favicon.ico",
             "https://ls.hzyuechuang.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/hdapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/hdapp.js"
     },
     {
         "id": "qxapp",
@@ -156,8 +156,8 @@
             "https://xinggeculture.com/favicon.ico",
             "https://xinggeculture.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/qxapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/qxapp.js"
     },
     {
         "id": "shapp",
@@ -187,8 +187,8 @@
             "https://xashangdian.com/favicon.ico",
             "https://xashangdian.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/shapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/shapp.js"
     },
     {
         "id": "kdzyapp",
@@ -218,8 +218,8 @@
             "http://kdzhy.mlyougame.com:82/favicon.ico",
             "http://kdzhy.mlyougame.com:82/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/kdzyapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/kdzyapp.js"
     },
     {
         "id": "njbsapp",
@@ -249,8 +249,8 @@
             "https://mly2bqr.com/favicon.ico",
             "https://mly2bqr.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/njbsapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/njbsapp.js"
     },
     {
         "id": "gmapp",
@@ -280,8 +280,8 @@
             "https://shanxixincensm.com/favicon.ico",
             "https://shanxixincensm.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/gmapp.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/gmapp.js"
     },
     {
         "id": "skjnapp",
@@ -311,46 +311,8 @@
             "https://yijianbwgd.com/favicon.ico",
             "https://yijianbwgd.com/favicon.ico"],
         "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://cdn.jsdelivr.net/gh/byxiaopeng/myscripts@main/skjnapp.js"
-    },
-	{
-        "id": "ykdapp",
-        "name": "悦看点APP",
-        "keys": ["ykdhd","ykdhd2"],
-        "settings": [{
-          "id": "ykdstatus",
-          "name": "当前账号",
-          "val": "1",
-          "type": "number",
-          "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
-        },
-		{
-            "id": "ykdcount",
-            "name": "账号个数",
-            "val": "1",
-            "type": "number",
-            "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
-        }, {
-            "id": "ykdhd",
-            "name": "悦看点hd信息1",
-            "val": "",
-            "type": "text",
-            "desc": ""
-        }
-		, {
-            "id": "ykdhd2",
-            "name": "悦看点hd信息2",
-            "val": "",
-            "type": "text",
-            "desc": ""
-        }],
-        "icons": [
-            "https://yuekandian.yichengw.cn/assets/logo1.png",
-            "https://yuekandian.yichengw.cn/assets/logo1.png"],
-        "author": "@byxiaopeng",
-        "repo": "https://github.com/byxiaopeng/myscripts",
-        "script": "https://raw.fastgit.org/byxiaopeng/myscripts/main/xmyd.js"
+        "repo": "https://gitee.com/gossh520/script",
+        "script": "https://gitee.com/gossh520/script/raw/master/skjnapp.js"
     }
 	]
 }
