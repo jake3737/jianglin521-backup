@@ -4,11 +4,65 @@
     "desc": "byxiaopeng脚本的定时任务",
     "date": "2021-11-24 11:11:11",
     "list": [
-	{"name":"鑫广","type":"cron","time":"25 10 * * *","job":{"type":"runjs","target":"https://gitee.com/gossh520/script/raw/master/xgapp.js"},"running":true},
-	{"name":"苏汇","type":"cron","time":"10 8,20 * * *","job":{"type":"runjs","target":"https://gitee.com/gossh520/script/raw/master/shapp.js"},"running":true},
-	{"name":"千熙","type":"cron","time":"10 8,20 * * *","job":{"type":"runjs","target":"https://gitee.com/gossh520/script/raw/master/qxapp.js"},"running":true},
-                {"name":"国迈","type":"cron","time":"10 8,20 * * *","job":{"type":"runjs","target":"https://gitee.com/gossh520/script/raw/master/gmapp.js"},"running":true},
-                {"name":"时空聚能","type":"cron","time":"10 8 * * *","job":{"type":"runjs","target":"https://gitee.com/gossh520/script/raw/master/skjnapp.js.js"},"running":true},
-	{"name":"景宁百狮","type":"cron","time":"10 8 * * *","job":{"type":"runjs","target":"https://gitee.com/gossh520/script/raw/master/jnbsapp.js"},"running":true}
-	]
+        {
+            "name": "鑫广",
+            "type": "cron",
+            "time": "25 10 * * *",
+            "job": {
+                "type": "runjs",
+                "target": "https://gitee.com/gossh520/script/raw/master/xgapp.js"
+            },
+            "running": true
+        },
+        {
+            "name": "苏汇",
+            "type": "cron",
+            "time": "10 8,20 * * *",
+            "job": {
+                "type": "runjs",
+                "target": "https://gitee.com/gossh520/script/raw/master/shapp.js"
+            },
+            "running": true
+        },
+        {
+            "name": "千熙",
+            "type": "cron",
+            "time": "10 8,20 * * *",
+            "job": {
+                "type": "runjs",
+                "target": "https://gitee.com/gossh520/script/raw/master/qxapp.js"
+            },
+            "running": true
+        },
+        {
+            "name": "国迈",
+            "type": "cron",
+            "time": "10 8,20 * * *",
+            "job": {
+                "type": "runjs",
+                "target": "https://gitee.com/gossh520/script/raw/master/gmapp.js"
+            },
+            "running": true
+        },
+        {
+            "name": "时空聚能",
+            "type": "cron",
+            "time": "10 8 * * *",
+            "job": {
+                "type": "runjs",
+                "target": "https://gitee.com/gossh520/script/raw/master/skjnapp.js.js"
+            },
+            "running": true
+        },
+        {
+            "name": "景宁百狮",
+            "type": "cron",
+            "time": "10 8 * * *",
+            "job": {
+                "type": "runjs",
+                "target": "https://gitee.com/gossh520/script/raw/master/jnbsapp.js"
+            },
+            "running": true
+        }
+    ]
 }
